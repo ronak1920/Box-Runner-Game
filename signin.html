@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="sign-in.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  </head>
+
+  <body>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDRP--z3NcM7ahSzqSmP2cd3Kzn0zki4gU",
+        authDomain: "box-runner-ed89a.firebaseapp.com",
+        databaseURL: "https://box-runner-ed89a-default-rtdb.firebaseio.com",
+        projectId: "box-runner-ed89a",
+        storageBucket: "box-runner-ed89a.appspot.com",
+        messagingSenderId: "970729213193",
+        appId: "1:970729213193:web:8a542591a7949cedd057d8"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      function writeData () {
+        firebase.database().ref("user").set({
+          userName : document.getElementById("username").value
+        });
+      }
+
+    </script> -->
+
+    <div class="sign-in-form">
+      <div class="logo"><img src="systango.png" alt=""></div>
+
+      <h3> Sign In To Continue  </h3>
+
+      <form action="">
+
+        <div class="textbox">
+          <input id="username" type="text" placeholder="Username Or Email">
+          <span class="check-message hidden">Required</span>
+        </div>
+
+        <button onclick =" location.href = 'game.html'" type="button" class="sign-in-btn" disabled>Sign In</button>
+        
+        <div class="privacy-link">
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+      </form>
+
+
+    <script type="text/javascript">
+      $(".textbox input").focusout(function(){
+        if($(this).val() == ""){
+          $(this).siblings().removeClass("hidden");
+          $(this).css("background","#554343");
+        }
+        else{
+          $(this).siblings().addClass("hidden");
+          $(this).css("background","#484848");
+        }
+      });
+
+      $(".textbox input").keyup(function(){
+        var inputs = $(".textbox input");
+        if(inputs[0].value != ""){
+          $(".sign-in-btn").attr("disabled",false);
+          $(".sign-in-btn").addClass("active");
+        }else{
+          $(".sign-in-btn").attr("disabled",true);
+          $(".sign-in-btn").removeClass("active");
+        }
+      });
+
+    </script>
+   
+  </body>
+</html>

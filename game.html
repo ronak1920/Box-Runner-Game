@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title> Trex Game </title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        padding: 10px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 30px;
+      }
+      h3 {
+        text-align: center;
+        padding: 30px;
+        background-color: #f94f62;
+      }
+      button {
+        width: 50px;
+        padding: 30px 30px;
+        padding-right: 30px;
+        border: 2px solid #fff;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 30px;
+        border: none;
+      }
+      canvas {
+        /* height: 500px;
+        width: 1200px; */
+        display: block;
+      }
+      .game {
+        background-color: lightgrey;
+        margin-top: 20px;
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 1200px;
+        overflow: hidden !important;
+        border: 15px solid #009879
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 100%;
+        background: #009879;
+        border-right: 2px solid #008C71;
+        box-shadow: 0 0 10px 5px rhba(0, 0, 0, 0.25);
+        opacity: 0;
+        transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+      .navbar--open {
+        left: 0;
+        opacity: 1;
+      }
+      .navbar--close {
+        left: -200;
+        opacity: 0;
+      }
+      .navbar__link {
+        display: flex;
+        align-items: center;
+        background: #008C71;
+        color: #ffffff;
+        padding: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.85rem;
+        border-bottom: 1px solid #009879;
+      }
+      .navbar__link .material-icons {
+        margin-right: 12px;
+      }
+      .navbar__link:active {
+        background: #007D65;
+      }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button onclick="location.href = 'leaderboard.html'" style="float: right;">
+      <span class="material-icons">
+        leaderboard
+      </span>
+    </button>
+    <div class="header">
+      <img src="systango.png" alt="logo" class="logo">
+    </div>
+  </header>
+
+  <h3> The Box Runner Game </h3>
+
+  
+  <!-- <div class = "navbar">
+    <a href="#" class="navbar__link">
+      <span class="material-icons">
+        home
+      </span> Home
+    </a>
+    <a href="#" class="navbar__link">
+      <span class="material-icons">
+        account_circle
+      </span> Your Account
+    </a>
+    <a href="#" class="navbar__link">
+      <span class="material-icons">
+        settings
+      </span> Settings
+    </a>
+    <a href="#" class="navbar__link">
+      <span class="material-icons">
+        logout
+      </span> LogOut
+    </a>
+  </div> -->
+
+
+  <div class="game">
+    <canvas id="game" width="640" height="400"></canvas>
+    <script src="box.js"> </script>
+  </div>
+</body>
+</html>

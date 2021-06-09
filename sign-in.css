@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "hind",sans-serif;
+    text-decoration: none;
+  }
+  
+body{
+    background: #f94f62;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.sign-in-form{
+    width: 550px;
+    background: #1abc9c;
+    padding: 30px 60px;
+}
+  
+.logo{
+    height: 50px;
+    text-align: center;
+}
+  
+.logo img{
+    height: 50px;
+}
+    
+.sign-in-form h3{
+    align-self: center;
+    color: #f1f1f1;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ 
+/* .text {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin-top: 15px;
+} */
+
+.textbox{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin-top: 15px;
+}
+  
+.textbox input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: lightgrey;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    color: #f4f4f4;
+}
+  
+.textbox input:focus{
+    background: #484848 !important;
+}
+  
+.check-message{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+}
+  
+.textbox input:focus + .check-message{
+    display: none;
+}
+  
+  .checked{
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    display: none;
+  }
+  
+  /* .checkbox input:checked + .checked{
+    display: block;
+  } */
+  
+.sign-in-btn{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    background: lightgrey;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .3s linear;
+}
+  
+.sign-in-btn.active{
+    background: #037bee;
+    color: #fff;
+}
+  
+.sign-in-btn.active:hover{
+    opacity: .7;
+}
+  
+.hidden{
+    display: none;
+}
+  
+.privacy-link{
+    text-align: center;
+    margin-top: 35px;
+}
+  
+.privacy-link a{
+    color: #f1f1f1;
+    font-size: 14px;
+}
+  
+@media screen and (max-width:470px) {
+    body{
+      background: #202020;
+    }
+  
+    .sign-in-form{
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+  
