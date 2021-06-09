@@ -6,35 +6,20 @@
     <link rel="stylesheet" href="sign-in.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+    <script src="firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
   </head>
 
   <body>
 
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDRP--z3NcM7ahSzqSmP2cd3Kzn0zki4gU",
-        authDomain: "box-runner-ed89a.firebaseapp.com",
-        databaseURL: "https://box-runner-ed89a-default-rtdb.firebaseio.com",
-        projectId: "box-runner-ed89a",
-        storageBucket: "box-runner-ed89a.appspot.com",
-        messagingSenderId: "970729213193",
-        appId: "1:970729213193:web:8a542591a7949cedd057d8"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      function writeData () {
+      <!-- function writeData () {
         firebase.database().ref("user").set({
           userName : document.getElementById("username").value
         });
-      }
+      } -->
 
-    </script> -->
 
     <div class="sign-in-form">
       <div class="logo"><img src="systango.png" alt=""></div>
@@ -48,7 +33,7 @@
           <span class="check-message hidden">Required</span>
         </div>
 
-        <button onclick =" location.href = 'game.html'" type="button" class="sign-in-btn" disabled>Sign In</button>
+        <button onclick =" location.href = 'game.html'" type="button" class="sign-in-btn" id="sign-in" disabled>Sign In</button>
         
         <div class="privacy-link">
           <a href="privacy-policy.html">Privacy Policy</a>
@@ -79,6 +64,15 @@
           $(".sign-in-btn").removeClass("active");
         }
       });
+
+      name = document.getElementById('username');
+
+      // document.getElementById('sign-in').onclick = function () {
+      //   name = document.getElementById('username').value;
+      //   database.ref('Leaderboard').update ({
+      //    [name] : 
+      //   });
+      // }
 
     </script>
    
