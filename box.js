@@ -1,3 +1,5 @@
+// import { database } from './firebase';
+
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 
@@ -250,7 +252,10 @@ function Update () {
             gameSpeed = 3;
             // When the charachter dies this code will 
             // store the highcore for us 
-            window.localStorage.setItem('highscore', highscore)
+
+            window.localStorage.setItem('highscore', highscore);
+            // window.localStorage.setItem('name', name);
+            // console.log(name);
         }
 
         obs.Update();
@@ -265,6 +270,9 @@ function Update () {
 
     if (score > highscore) {
         highscore = score;
+        database.ref('Leaderboard').update ({
+         [highscore] : highscore
+        });
         highScoreCount.text = "High-Score : " + highscore;
     }
 
