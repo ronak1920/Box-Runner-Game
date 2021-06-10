@@ -11,5 +11,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // console.log(firebase);
 
-// var database = firebase.database();
+var database = firebase.database();
 // var ref = database.ref('highScore');
+
+export default { database };
